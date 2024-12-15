@@ -644,7 +644,7 @@ const initPredictLoop = (video) => {
         drawLandmarks(landmarks, ctx, "#ffffff"); // Draw the landmarks in white
       });
     } else {
-      console.log("No landmarks detected in this frame.");
+      // console.log("No landmarks detected in this frame.");
     }
 
     requestAnimationFrame(predict); // 다음 프레임을 요청합니다.
