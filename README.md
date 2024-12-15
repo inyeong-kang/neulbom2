@@ -1,1 +1,1 @@
-# neulbom2
+# 2024-2 Capstone 디자인
