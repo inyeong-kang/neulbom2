@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/agora-box-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" /> 
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Real-time Stretching Feedback</title>
+  </head>
+  <body>
+
+    <div id="dimmer">
+      <div class="spinner"></div>
+    </div>
+    <!-- 비디오 스트리밍 영역 -->
+    <div id="channel-info">
+      <h1 id="channel-name"></h1>
+    <!-- 스트레칭 피드백 메시지 영역 -->   
+      <div id="local-user-container">
+        <div id="feedback">Stretching Feedback Here</div>
+      </div>
+      <!-- 텍스트 출력 영역 -->
+      <div id="recognized-text">
+        <div class="chat-response"></div>
+      </div> 
+    </div> 
+    <!-- 미디어 제어 버튼들 -->
+    <div id="local-media-controls">
+      <button id="mic-toggle" class="media-active">마이크 끄기</button>
+      <button id="video-toggle" class="media-active">비디오 끄기</button>
+      <button id="speech-toggle" class="speech-recognition-btn">대화 시작</button>
+      <button id="download-btn">대화 내역 다운로드(txt)</button>
+      <button id="download-btn-csv">대화 내역 다운로드(csv)</button>
+      <button id="leave-channel" class="media-active">통화 종료</button>
+    </div>
+    
+    <!-- 채널 참여를 위한 오버레이 -->
+    <div id="overlay" class="modal">
+      <div id="form-container">
+        <h4 id="form-header">반가워요! 😊 <br/>오늘 하루를 시작해볼까요?</h4>
+        <form id="join-channel-form">
+          <div id="form-body">
+            <div class="form-group">
+              <label for="form-rpm-url">채널 ID</label>
+              <input
+                type="text"
+                id="form-rpm-url"
+                placeholder="채널 ID 를 입력해 주세요:)"
+                class="form-control"
+              />
+            </div>
+            <div id="form-footer">
+              <button type="submit" id="join-channel-btn">통화 시작하기</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <body>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
